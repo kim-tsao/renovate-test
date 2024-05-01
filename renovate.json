@@ -1,6 +1,75 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
-  ]
+    "config:best-practices",
+    ":gitSignOff",
+    ":rebaseStalePrs",
+    "group:allNonMajor",
+    "group:linters",
+    "group:test",
+    ":preserveSemverRanges",
+    ":pinOnlyDevDependencies",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "labels": ["kind/dependency upgrade"],
+  "baseBranches": ["main", "/^1\\..*\\.x/"],
+  "npm": {
+    "minimumReleaseAge": "1 day"
+  },
+  "packageRules": [
+    {
+      "description": "Do automerge and pin actions in GH workflows, except for versions starting with 0",
+      "enabled": true,
+      "matchManagers": ["github-actions"],
+      "matchCurrentVersion": "!/^0/",
+      "groupName": "GitHub Actions",
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "DevDependencies (non-major)",
+      "automerge": true
+    },
+    {
+      "matchDepPatterns": ["^@backstage/"],
+      "groupName": "Core Backstage packages",
+      "enabled": "false"
+    },
+    {
+      "matchDepPatterns": [
+        "^@semantic-release/",
+        "^@semrel-extra/",
+        "^multi-semantic-release$"
+      ],
+      "groupName": "semantic-release monorepo"
+    },
+    {
+      "description": "disable updates to the keycloak admin client - see https://github.com/janus-idp/backstage-plugins/issues/47 https://github.com/janus-idp/backstage-plugins/issues/1046",
+      "enabled": false,
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["@keycloak/keycloak-admin-client"],
+      "groupName": "Keycloak dependency"
+    },
+    {
+      "description": "ignore updates to the axios to version that keycloak 18 needs",
+      "enabled": false,
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["axios"],
+      "matchCurrentVersion": "0.26.1",
+      "groupName": "Keycloak dependency"
+    },
+    {
+      "description": "group orchestrator issues",
+      "groupName": "Orchestrator dependencies", 
+      "additionalBranchPrefix": "{{baseDir}}-",
+      "matchPackagePatterns": ["orchestrator.*", "notifications.*"]
+    }
+  ],
+  "ignorePaths": ["**/dist-dynamic/**"],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "addLabels": ["kind/security"]
+  },
+  "osvVulnerabilityAlerts": true
 }
