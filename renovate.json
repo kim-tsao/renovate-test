@@ -60,12 +60,9 @@
       "groupName": "Keycloak dependency"
     },
     {
-      "matchPaths": ["orchestrator**"],
-      "groupName": "{{{ replace '(orchestrator.*?)\\/.*' '$1' packageFileDir}}}"
-    },    
-    {
-      "additionalBranchPrefix": "{{baseDir}}-",
-      "packagePatterns": [".*"]
+      "matchPackagePatterns": ["orchestrator**"],
+      "groupName": "orchestrator",
+      "additionalBranchPrefix":""
     }
   ],
   "ignorePaths": ["**/dist-dynamic/**"],
