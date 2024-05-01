@@ -60,7 +60,7 @@
       "groupName": "Keycloak dependency"
     },
     {
-      "matchPackagePatterns": ["orchestrator**"],
+      "matchPackagePatterns": ["^orchestrator"],
       "groupName": "orchestrator",
       "additionalBranchPrefix":""
     }
