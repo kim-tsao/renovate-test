@@ -60,10 +60,15 @@
       "groupName": "Keycloak dependency"
     },
     {
-      "description": "group orchestrator issues",
-      "groupName": "Orchestrator dependencies", 
-      "additionalBranchPrefix": "{{baseDir}}-",
-      "matchPackagePatterns": ["orchestrator.*", "notifications.*"]
+      "groupName": "orchestrator all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "matchPackagePatterns": [
+        "orchestrator.*", "notifications.*"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
     }
   ],
   "ignorePaths": ["**/dist-dynamic/**"],
