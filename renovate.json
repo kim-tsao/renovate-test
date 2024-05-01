@@ -3,6 +3,7 @@
     "config:best-practices",
     ":gitSignOff",
     ":rebaseStalePrs",
+    "group:allNonMajor",
     "group:linters",
     "group:test",
     ":preserveSemverRanges",
@@ -59,15 +60,8 @@
       "groupName": "Keycloak dependency"
     },
     {
-      "groupName": "orchestrator all non-major dependencies",
-      "groupSlug": "all-minor-patch",
-      "matchPackagePatterns": [
-        "^orchestrator", "^notifications"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ]
+      "additionalBranchPrefix": "{{baseDir}}-",
+      "packagePatterns": [".*"]
     }
   ],
   "ignorePaths": ["**/dist-dynamic/**"],
