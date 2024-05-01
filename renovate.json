@@ -63,7 +63,7 @@
       "groupName": "orchestrator all non-major dependencies",
       "groupSlug": "all-minor-patch",
       "matchPackagePatterns": [
-        "orchestrator.*", "notifications.*"
+        "^orchestrator", "^notifications"
       ],
       "matchUpdateTypes": [
         "minor",
