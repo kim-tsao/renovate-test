@@ -28,7 +28,7 @@
     {
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "DevDependencies (non-major)",
+      "groupName": "{{baseDir}}-DevDependencies (non-major)",
       "automerge": true
     },
     {
@@ -60,9 +60,8 @@
       "groupName": "Keycloak dependency"
     },
     {
-      "matchPackagePatterns": ["^orchestrator"],
-      "groupName": "orchestrator",
-      "additionalBranchPrefix":""
+      "additionalBranchPrefix": "{{baseDir}}-",
+      "matchPackagePatterns": [".*"]
     }
   ],
   "ignorePaths": ["**/dist-dynamic/**"],
