@@ -28,7 +28,7 @@
     {
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "{{baseDir}}-DevDependencies (non-major)",
+      "groupName": "{{baseDir}} DevDependencies (non-major)",
       "automerge": true
     },
     {
@@ -62,7 +62,11 @@
     {
       "additionalBranchPrefix": "{{baseDir}}-",
       "matchPackagePatterns": [".*"]
-    }
+    },
+    {
+      "matchPaths": ["^orchestrator.*", "^notifications.*"],
+      "groupName": "orchestrator"
+    },
   ],
   "ignorePaths": ["**/dist-dynamic/**"],
   "vulnerabilityAlerts": {
