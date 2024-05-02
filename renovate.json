@@ -66,7 +66,7 @@
     {
       "matchPaths": ["^orchestrator.*", "^notifications.*"],
       "groupName": "orchestrator"
-    },
+    }
   ],
   "ignorePaths": ["**/dist-dynamic/**"],
   "vulnerabilityAlerts": {
