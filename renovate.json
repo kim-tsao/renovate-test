@@ -24,15 +24,8 @@
       "automerge": true
     },
     {
+      "extends": "group:allNonMajor",
       "groupName": "{{additionalBranchPrefix}}  all non-major dependencies",
-      "groupSlug": "all-minor-patch",
-      "matchPackagePatterns": [
-        "*"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ]
     },    
     {
       "matchDepTypes": ["devDependencies"],
@@ -41,14 +34,31 @@
       "automerge": true
     },
     {
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "{{additionalBranchPrefix}} DevDependencies (major)",
+      "automerge": true
+    },    
+    {
       "extends": "packages:test",
-      "groupName": "{{additionalBranchPrefix}} test packages"
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "{{additionalBranchPrefix}} minor test packages"
     },
     {
+      "extends": "packages:test",
+      "matchUpdateTypes": ["major"],
+      "groupName": "{{additionalBranchPrefix}} major test packages"
+    },    
+    {
       "matchFileNames": ["orchestrator/**", "notifications/**"],      
-      "additionalBranchPrefix": "orchestrator-",
+      "additionalBranchPrefix": "orchestrator -",
       "matchPackagePatterns": [".*"]
     },    
+    {
+      "matchFileNames": ["keycloak/**"],      
+      "additionalBranchPrefix": "keycloak -",
+      "matchPackagePatterns": [".*"]
+    },       
     {
       "matchDepPatterns": ["^@backstage/"],
       "groupName": "Core Backstage packages",
