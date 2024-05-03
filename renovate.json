@@ -28,7 +28,7 @@
     {
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "DevDependencies (non-major)",
+      "groupName": "{{additionalBranchPrefix}} DevDependencies (non-major)",
       "automerge": true
     },
     {
