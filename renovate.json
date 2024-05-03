@@ -26,25 +26,21 @@
       "automerge": true
     },
     {
+      "groupName": "{{additionalBranchPrefix}} all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
+    },
+    {
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch", "minor"],
       "groupName": "{{additionalBranchPrefix}} DevDependencies (non-major)",
       "automerge": true
-    },
-    {
-      "packageRules": [
-        {
-          "groupName": "{{additionalBranchPrefix}} all non-major dependencies",
-          "groupSlug": "all-minor-patch",
-          "matchPackagePatterns": [
-            "*"
-          ],
-          "matchUpdateTypes": [
-            "minor",
-            "patch"
-          ]
-        }
-      ]
     },
     {
       "matchFileNames": ["orchestrator/**", "notifications/**"],      
