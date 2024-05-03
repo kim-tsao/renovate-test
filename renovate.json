@@ -9,7 +9,6 @@
     ":pinOnlyDevDependencies",
     "helpers:pinGitHubActionDigests"
   ],
-  "ignorePresets": ["group:monorepos"],  
   "labels": ["kind/dependency upgrade"],
   "baseBranches": ["main", "/^1\\..*\\.x/"],
   "npm": {
@@ -26,8 +25,7 @@
       "automerge": true
     },
     {
-      "matchDepTypes": ["!/devDependencies/"],      
-      "groupName": "{{additionalBranchPrefix}} all non-major dependencies",
+      "groupName": "{{additionalBranchPrefix}}  all non-major dependencies",
       "groupSlug": "all-minor-patch",
       "matchPackagePatterns": [
         "*"
@@ -36,7 +34,7 @@
         "minor",
         "patch"
       ]
-    },
+    },    
     {
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch", "minor"],
