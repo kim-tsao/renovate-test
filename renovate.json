@@ -29,7 +29,7 @@
     },
     {
       "matchDepTypes": ["dependencies"],
-      "groupName": "{{additionalBranchPrefix}} all minor dependencies",
+      "groupName": "{{additionalBranchPrefix}} Dependencies (minor)",
       "matchPackagePatterns": [
         "*"
       ],
@@ -40,7 +40,7 @@
     },    
     {
       "matchDepTypes": ["dependencies"],
-      "groupName": "{{additionalBranchPrefix}}  all dependencies",
+      "groupName": "{{additionalBranchPrefix}} Dependencies",
       "matchPackagePatterns": [
         "*"
       ],
@@ -51,7 +51,7 @@
     {
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "{{additionalBranchPrefix}} DevDependencies (non-major)",
+      "groupName": "{{additionalBranchPrefix}} DevDependencies (minor)",
       "automerge": true
     },
     {
@@ -63,12 +63,12 @@
     {
       "extends": "packages:test",
       "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "{{additionalBranchPrefix}}  test packages (minor)"
+      "groupName": "{{additionalBranchPrefix}}  Test packages (minor)"
     },
     {
       "extends": "packages:test",
       "matchUpdateTypes": ["major"],
-      "groupName": "{{additionalBranchPrefix}} test packages"
+      "groupName": "{{additionalBranchPrefix}} Test packages"
     },    
     {
       "matchDepPatterns": ["^@backstage/"],
