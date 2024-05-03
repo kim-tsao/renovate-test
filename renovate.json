@@ -8,6 +8,7 @@
     ":pinOnlyDevDependencies",
     "helpers:pinGitHubActionDigests"
   ],
+  "ignorePresets": ["group:monorepos"], 
   "labels": ["kind/dependency upgrade"],
   "baseBranches": ["main", "/^1\\..*\\.x/"],
   "npm": {
@@ -48,7 +49,7 @@
     {
       "extends": "packages:test",
       "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "{{additionalBranchPrefix}} minor test packages"
+      "groupName": "{{additionalBranchPrefix}}  test packages (minor)"
     },
     {
       "extends": "packages:test",
