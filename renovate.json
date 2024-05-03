@@ -36,7 +36,7 @@
     {
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["major"],
-      "groupName": "{{additionalBranchPrefix}} DevDependencies (major)",
+      "groupName": "{{additionalBranchPrefix}} DevDependencies",
       "automerge": true
     },    
     {
@@ -47,10 +47,10 @@
     {
       "extends": "packages:test",
       "matchUpdateTypes": ["major"],
-      "groupName": "{{additionalBranchPrefix}} major test packages"
+      "groupName": "{{additionalBranchPrefix}} test packages"
     },    
     {
-      "matchFileNames": ["orchestrator/**", "notifications/**"],      
+      "matchFileNames": ["orchestrator.*/**", "notifications.*/**"],      
       "additionalBranchPrefix": "orchestrator -",
       "matchPackagePatterns": [".*"]
     },    
