@@ -99,15 +99,10 @@
       "groupName": "Keycloak dependency"
     },
     {
-      "matchFileNames": ["orchestrator*/**"],      
+      "matchFileNames": ["orchestrator*/**","notifications*/**"],      
       "additionalBranchPrefix": "orchestrator -",
       "matchPackagePatterns": [".*"]
-    },    
-    {
-      "matchFileNames": ["notifications*/**"],      
-      "additionalBranchPrefix": "notifications -",
-      "matchPackagePatterns": [".*"]
-    },        
+    },      
     {
       "matchFileNames": ["keycloak*/**"],      
       "additionalBranchPrefix": "keycloak -",
