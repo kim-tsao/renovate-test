@@ -24,8 +24,15 @@
       "automerge": true
     },
     {
-      "extends": "group:allNonMajor",
-      "groupName": "{{additionalBranchPrefix}}  all non-major dependencies"
+      "groupName": "{{additionalBranchPrefix}}  all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
     },    
     {
       "matchDepTypes": ["devDependencies"],
