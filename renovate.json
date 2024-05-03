@@ -24,8 +24,7 @@
       "automerge": true
     },
     {
-      "groupName": "{{additionalBranchPrefix}}  all non-major dependencies",
-      "groupSlug": "all-minor-patch",
+      "groupName": "{{additionalBranchPrefix}}  all minor dependencies",
       "matchPackagePatterns": [
         "*"
       ],
