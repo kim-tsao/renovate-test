@@ -28,7 +28,8 @@
       "automerge": true
     },
     {
-      "groupName": "{{additionalBranchPrefix}}  all minor dependencies",
+      "matchDepTypes": ["dependencies"],
+      "groupName": "{{additionalBranchPrefix}} all minor dependencies",
       "matchPackagePatterns": [
         "*"
       ],
@@ -37,6 +38,16 @@
         "patch"
       ]
     },    
+    {
+      "matchDepTypes": ["dependencies"],
+      "groupName": "{{additionalBranchPrefix}}  all dependencies",
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    },       
     {
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch", "minor"],
