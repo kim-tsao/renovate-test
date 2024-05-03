@@ -4,7 +4,6 @@
     ":gitSignOff",
     ":rebaseStalePrs",
     "group:linters",
-    "group:test",
     ":preserveSemverRanges",
     ":pinOnlyDevDependencies",
     "helpers:pinGitHubActionDigests"
@@ -40,6 +39,10 @@
       "matchUpdateTypes": ["patch", "minor"],
       "groupName": "{{additionalBranchPrefix}} DevDependencies (non-major)",
       "automerge": true
+    },
+    {
+      "extends": "packages:test",
+      "groupName": "{{additionalBranchPrefix}} test packages"
     },
     {
       "matchFileNames": ["orchestrator/**", "notifications/**"],      
