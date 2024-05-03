@@ -26,9 +26,15 @@
       "automerge": true
     },
     {
+      "matchPaths": ["^orchestrator.*", "^notifications.*"],      
+      "additionalBranchPrefix": "orchestrator-",
+      "matchPackagePatterns": [".*"]
+      
+    },
+    {
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "{{baseDir}} DevDependencies (non-major)",
+      "groupName": "DevDependencies (non-major)",
       "automerge": true
     },
     {
@@ -58,14 +64,6 @@
       "matchPackageNames": ["axios"],
       "matchCurrentVersion": "0.26.1",
       "groupName": "Keycloak dependency"
-    },
-    {
-      "additionalBranchPrefix": "{{baseDir}}-",
-      "matchPackagePatterns": [".*"]
-    },
-    {
-      "matchPaths": ["^orchestrator.*", "^notifications.*"],
-      "groupName": "orchestrator"
     }
   ],
   "ignorePaths": ["**/dist-dynamic/**"],
