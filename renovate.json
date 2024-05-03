@@ -25,7 +25,7 @@
     },
     {
       "extends": "group:allNonMajor",
-      "groupName": "{{additionalBranchPrefix}}  all non-major dependencies",
+      "groupName": "{{additionalBranchPrefix}}  all non-major dependencies"
     },    
     {
       "matchDepTypes": ["devDependencies"],
