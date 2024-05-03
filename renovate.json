@@ -50,12 +50,12 @@
       "groupName": "{{additionalBranchPrefix}} test packages"
     },    
     {
-      "matchFileNames": ["orchestrator.*/**", "notifications.*/**"],      
+      "matchFileNames": ["orchestrator*/**", "notifications*/**"],      
       "additionalBranchPrefix": "orchestrator -",
       "matchPackagePatterns": [".*"]
     },    
     {
-      "matchFileNames": ["keycloak.*/**"],      
+      "matchFileNames": ["keycloak*/**"],      
       "additionalBranchPrefix": "keycloak -",
       "matchPackagePatterns": [".*"]
     },       
