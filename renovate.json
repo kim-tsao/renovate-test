@@ -55,7 +55,7 @@
       "matchPackagePatterns": [".*"]
     },    
     {
-      "matchFileNames": ["keycloak/**"],      
+      "matchFileNames": ["keycloak.*/**"],      
       "additionalBranchPrefix": "keycloak -",
       "matchPackagePatterns": [".*"]
     },       
