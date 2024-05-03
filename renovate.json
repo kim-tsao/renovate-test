@@ -26,17 +26,16 @@
       "automerge": true
     },
     {
-      "matchPaths": ["^orchestrator.*", "^notifications.*"],      
-      "additionalBranchPrefix": "orchestrator-",
-      "matchPackagePatterns": [".*"]
-      
-    },
-    {
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch", "minor"],
       "groupName": "DevDependencies (non-major)",
       "automerge": true
     },
+    {
+      "matchFileNames": ["orchestrator/**", "notifications/**"],      
+      "additionalBranchPrefix": "orchestrator-",
+      "matchPackagePatterns": [".*"]
+    },    
     {
       "matchDepPatterns": ["^@backstage/"],
       "groupName": "Core Backstage packages",
